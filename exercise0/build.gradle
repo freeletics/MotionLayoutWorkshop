@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'shot'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 shot {
     appId = 'com.hannesdorfmann.motionlayout.exercise1'
