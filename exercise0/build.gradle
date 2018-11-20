@@ -4,16 +4,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 shot {
-    appId = 'com.hannesdorfmann.motionlayout.exercise1'
+    appId = 'com.hannesdorfmann.motionlayout.exercise0'
 }
 
 android {
     compileSdkVersion 28
 
-
-
     defaultConfig {
-        applicationId "com.hannesdorfmann.motionlayout.exercise1"
+        applicationId "com.hannesdorfmann.motionlayout.exercise0"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
