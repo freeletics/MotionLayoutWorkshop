@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:interpolator="easeInOut">
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/videoPlayer"
+            motion:touchAnchorSide="bottom" />
+        />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="0"
+                motion:target="@id/detailsList" />
+            <KeyAttribute
+                android:alpha="0.1"
+                motion:framePosition="60"
+                motion:target="@id/detailsList" />
+
+            <KeyAttribute
+                android:alpha="1.0"
+                motion:framePosition="90"
+                motion:target="@id/detailsList" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/start">
+        <Constraint
+            android:id="@+id/videoPlayer"
+            android:layout_width="205dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/vulcan"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,820:461"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Constraint
+            android:id="@id/detailsList"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="@id/videoPlayer"
+            app:layout_constraintStart_toStartOf="@id/videoPlayer"
+            app:layout_constraintTop_toBottomOf="@id/videoPlayer" />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/end">
+        <Constraint
+            android:id="@id/videoPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/vulcan"
+            app:layout_constraintDimensionRatio="H,820:461"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/detailsList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/videoPlayer" />
+    </ConstraintSet>
+
+</MotionScene>

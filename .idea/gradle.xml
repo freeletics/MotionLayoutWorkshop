@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/exercise0" />
             <option value="$PROJECT_DIR$/exercise1" />
+            <option value="$PROJECT_DIR$/exercise2" />
+            <option value="$PROJECT_DIR$/exercise3" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

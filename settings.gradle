@@ -1,1 +1,1 @@
-include ':exercise1', ':exercise0'
+include ':exercise1', ':exercise0', ':exercise2', ':exercise3'
